@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:background="@color/white"
+    android:padding="5dp">
+
+    <ImageButton
+        android:id="@+id/moreBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_navigate_next_24"
+        android:tint="@color/black" />
+
+    <!--Page Title-->
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_toStartOf="@id/moreBtn"
+        android:layout_toLeftOf="@id/moreBtn"
+        android:text="The Page Title"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!--Publisher info, date, time-->
+    <TextView
+        android:id="@+id/publishInfoTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTv"
+        android:layout_toStartOf="@id/moreBtn"
+        android:layout_toLeftOf="@id/moreBtn"
+        android:text="By Admin 07/01/2021"
+        android:textColor="@color/gray01" />
+
+    <!--thumbnail of page-->
+    <ImageView
+        android:id="@+id/imageIv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/publishInfoTv"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/gray01"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_baseline_image_24" />
+
+    <!-- Page content/description -->
+    <TextView
+        android:id="@+id/descriptionTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/publishInfoTv"
+        android:layout_toStartOf="@id/moreBtn"
+        android:layout_toLeftOf="@id/moreBtn"
+        android:layout_toEndOf="@id/imageIv"
+        android:layout_toRightOf="@id/imageIv"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:text="The description of the page, 4 lines only"
+        android:textColor="@color/black" />
+
+</RelativeLayout>
